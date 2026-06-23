@@ -1,20 +1,3 @@
-
-```markdown
-# Panduan Pemulihan Tabel Partisi GPT Corrupt & Reinstall GRUB (Dual-Boot)
-
-Dokumen ini berisi panduan langkah-demi-langkah untuk mengatasi masalah tabel partisi utama (GPT) yang korup pada sistem dual-boot (Windows & Linux Ubuntu). Masalah ini biasanya menyebabkan hilangnya daftar partisi pada kernel (`lsblk`) dan kegagalan booting GRUB (masuk ke prompt `grub>`).
-
-## 🚨 Gejala Masalah
-1. Sistem tidak bisa booting dan langsung masuk ke prompt `grub>`.
-2. Saat menggunakan Live USB Linux, perintah `lsblk` hanya menampilkan drive utama (misalnya `nvme0n1`) tetapi partisi di bawahnya (`nvme0n1p1`, `nvme0n1p5`, dll) **tidak muncul**.
-3. Perintah `sudo fdisk -l /dev/nvme0n1` menampilkan pesan peringatan:
-```text
-   The primary GPT table is corrupt, but the backup appears OK, so that will be used.
-
-```
-
----
-
 ## 🛠️ Langkah-Langkah Pemulihan
 
 ### Fase 1: Memulihkan Tabel Partisi Utama (GPT) dari Salinan Cadangan
